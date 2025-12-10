@@ -1,0 +1,376 @@
+/* ===================================
+   SINBAR TIK - Main Stylesheet
+   =================================== */
+
+:root {
+    --sinbar-blue: #2563eb;
+    --sinbar-white: #ffffff;
+    --sinbar-black: #1f2937;
+    --sinbar-grey: #6b7280;
+    --sinbar-light-grey: #f8fafc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--sinbar-light-grey);
+    color: var(--sinbar-black);
+}
+
+/* ===================================
+   HEADER & NAVBAR
+   =================================== */
+
+.header-strip {
+    background-color: var(--sinbar-blue);
+    color: var(--sinbar-white);
+    padding: 8px 0;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.navbar-custom {
+    background-color: var(--sinbar-white);
+    padding: 12px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--sinbar-blue) !important;
+    font-weight: 700;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.navbar-brand:hover {
+    color: var(--sinbar-blue) !important;
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.navbar-nav .nav-link {
+    color: var(--sinbar-black) !important;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 8px 20px !important;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--sinbar-blue) !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--sinbar-blue) !important;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--sinbar-blue);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 80%;
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 4px 8px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    background-image: none;
+    width: 24px;
+    height: 24px;
+}
+
+.navbar-toggler .ph {
+    font-size: 24px;
+    color: var(--sinbar-blue);
+}
+
+/* Account Buttons */
+.account-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn-register {
+    background-color: transparent;
+    color: var(--sinbar-blue);
+    border: 2px solid var(--sinbar-blue);
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-register:hover {
+    background-color: var(--sinbar-blue);
+    color: var(--sinbar-white);
+    text-decoration: none;
+}
+
+.btn-login {
+    background-color: var(--sinbar-blue);
+    color: var(--sinbar-white);
+    border: 2px solid var(--sinbar-blue);
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-login:hover {
+    background-color: transparent;
+    color: var(--sinbar-blue);
+    text-decoration: none;
+}
+
+/* ===================================
+   FOOTER
+   =================================== */
+
+.footer-container {
+    background-color: #ffffff;
+    border-top: 1px solid #e9ecef;
+    padding: 50px 0 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.description {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.contact-section h5,
+.development-section h5 {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.contact-info,
+.developer-info {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.contact-info .contact-item {
+    margin-bottom: 8px;
+}
+
+.contact-info .contact-item i {
+    width: 20px;
+    color: #007bff;
+    margin-right: 8px;
+}
+
+.developer-info .dev-item {
+    margin-bottom: 5px;
+}
+
+.bottom-bar {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 30px;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid #e5e7eb;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 12px 0 !important;
+    }
+
+    .navbar-nav .nav-link::after {
+        display: none;
+    }
+
+    .account-buttons {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid #e5e7eb;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 0 15px;
+    }
+    
+    .logo-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .description {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    
+    .contact-section, 
+    .development-section {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    
+    .bottom-bar {
+        font-size: 0.8rem;
+        padding: 12px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-strip {
+        font-size: 12px;
+        padding: 6px 0;
+    }
+
+    .navbar-brand {
+        font-size: 20px;
+    }
+
+    .logo-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+    }
+
+    .account-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-register,
+    .btn-login {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-container {
+        padding: 30px 0 0;
+    }
+    
+    .description {
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+    }
+    
+    .contact-section h5, 
+    .development-section h5 {
+        font-size: 0.95rem;
+    }
+    
+    .contact-info, 
+    .developer-info {
+        font-size: 0.85rem;
+    }
+}
+
+/* ===================================
+   UTILITY CLASSES
+   =================================== */
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-center {
+    text-align: center;
+}

@@ -33,7 +33,7 @@
                                     </div>
                                     <div class="contact-item">
                                         <i class="fas fa-phone"></i>
-                                        +62 821 4532 2303
+                                        +62 812-3456-7890
                                     </div>
                                 </div>
                             </div>
